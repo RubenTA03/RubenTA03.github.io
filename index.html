@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rubén Tercero Alcázar · Help Desk en Ciudad Real</title>
+<meta name="description" content="Rubén Tercero Alcázar, 23 años, Ciudad Real. Técnico de sistemas (SMR) con más de 400 horas atendiendo en remoto a más de 30 clientes. Busca Help Desk o soporte IT, en remoto o en Ciudad Real o Madrid. Incorporación inmediata.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fondo: #121110; --fondo2: #1a1917; --texto: #f3efe6; --gris: #a39e93;
+    --linea: #2a2825; --acento: #f5c400; --sobre-acento: #121110;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--fondo); color: var(--texto); font-family: "Manrope", system-ui, sans-serif;
+         font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .num, .marca, .btn { font-family: "Sora", system-ui, sans-serif; }
+  a { color: inherit; }
+  .ancho { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 56px 0; border-top: 1px solid var(--linea); }
+  .etiqueta { font-family: "Sora", sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 2px;
+              text-transform: uppercase; color: var(--acento); margin-bottom: 18px; }
+  h2 { font-weight: 800; font-size: clamp(26px, 5vw, 36px); line-height: 1.15; margin-bottom: 20px; text-wrap: balance; }
+  h3 { font-weight: 700; font-size: 20px; line-height: 1.25; }
+  .gris { color: var(--gris); }
+  .meta { color: var(--gris); font-size: 15px; margin: 4px 0 10px; }
+
+  /* 1. Cabecera */
+  .barra { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 20px;
+           max-width: 920px; margin: 0 auto; }
+  .marca { font-weight: 700; font-size: 15px; }
+  .barra span:last-child { color: var(--gris); font-size: 14px; text-align: right; }
+
+  /* 2. Portada */
+  .portada { padding: 28px 0 56px; }
+  .portada img { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; border: 4px solid var(--acento);
+                 display: block; margin-bottom: 24px; -webkit-user-drag: none; user-select: none; pointer-events: none; }
+  h1 { font-weight: 800; font-size: clamp(38px, 9vw, 68px); line-height: 1.02; letter-spacing: -1px; text-wrap: balance; }
+  .gancho { font-family: "Sora", sans-serif; font-weight: 500; font-size: clamp(18px, 3.4vw, 23px); line-height: 1.4;
+            color: var(--acento); margin: 18px 0 22px; max-width: 30em; }
+  .pastillas { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin-bottom: 28px; }
+  .pastillas li { border: 1px solid var(--linea); background: var(--fondo2); border-radius: 999px; padding: 6px 14px;
+                  font-size: 14px; font-weight: 500; }
+  .botones { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px;
+         border-radius: 12px; font-weight: 700; font-size: 16px; text-decoration: none; cursor: pointer;
+         border: 1px solid var(--linea); background: transparent; color: var(--texto); }
+  .btn.principal { background: var(--acento); color: var(--sobre-acento); border-color: var(--acento); }
+  .btn:hover { filter: brightness(1.1); }
+  .btn:focus-visible, .copiar:focus-visible { outline: 3px solid var(--texto); outline-offset: 2px; }
+
+  /* 3. Cifras */
+  .cifras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--linea);
+            border: 1px solid var(--linea); border-radius: 16px; overflow: hidden; }
+  .cifras div { background: var(--fondo2); padding: 22px 18px; }
+  .num { display: block; font-weight: 800; font-size: clamp(27px, 6.6vw, 38px); line-height: 1.05; color: var(--acento); white-space: nowrap; }
+  .cifras span:last-child { display: block; margin-top: 8px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--gris); line-height: 1.35; }
+
+  /* 4-5. Trabajos */
+  .tarjeta { background: var(--fondo2); border: 1px solid var(--linea); border-radius: 16px; padding: 24px 20px; margin-top: 16px; }
+  .tarjeta p + p { margin-top: 10px; }
+  .destacado { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--linea); }
+  .destacado .num { font-size: 40px; }
+  .enlace { color: var(--acento); font-weight: 600; text-underline-offset: 3px; }
+  .antes { display: grid; grid-template-columns: 1fr; gap: 6px 24px; padding: 22px 0; border-top: 1px solid var(--linea); }
+  .antes:first-of-type { border-top: 0; padding-top: 0; }
+  .antes .num { font-size: 34px; }
+
+  /* 6-7. Listas */
+  .lista { list-style: none; }
+  .lista li { position: relative; padding-left: 22px; margin-bottom: 12px; }
+  .lista li::before { content: "▸"; position: absolute; left: 0; color: var(--acento); }
+  .dos { display: grid; grid-template-columns: 1fr; gap: 36px; }
+  .dos h3 { margin-bottom: 12px; }
+
+  /* 8. Contacto */
+  .contacto h2 { font-size: clamp(32px, 7vw, 52px); }
+  .dato { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+          background: var(--fondo2); border: 1px solid var(--linea); border-radius: 14px; padding: 14px 16px; margin-bottom: 12px; }
+  .dato b { font-family: "Sora", sans-serif; font-weight: 700; font-size: clamp(17px, 4.4vw, 22px); overflow-wrap: anywhere; }
+  .copiar { min-height: 42px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--acento); background: transparent;
+            color: var(--acento); font: 600 14px "Manrope", sans-serif; cursor: pointer; }
+  .copiar.ok { background: var(--acento); color: var(--sobre-acento); }
+  .contacto .botones { margin-top: 20px; }
+
+  footer { border-top: 1px solid var(--linea); padding: 28px 20px 40px; text-align: center; color: var(--gris); font-size: 14px; }
+
+  @media (min-width: 720px) {
+    section { padding: 76px 0; }
+    .portada { padding: 48px 0 76px; display: grid; grid-template-columns: auto 1fr; gap: 44px; align-items: center; }
+    .portada img { width: 190px; height: 190px; margin: 0; }
+    .cifras { grid-template-columns: repeat(4, 1fr); }
+    .tarjeta { padding: 32px; }
+    .antes { grid-template-columns: 170px 1fr; }
+    .dos { grid-template-columns: 1fr 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<!-- 1. Cabecera -->
+<div class="barra">
+  <span class="marca">Rubén Tercero Alcázar</span>
+  <span>Help Desk · Ciudad Real</span>
+</div>
+
+<main class="ancho">
+
+  <!-- 2. Portada -->
+  <div class="portada">
+    <img src="data:image/jpeg;base64,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" alt="Foto de Rubén Tercero Alcázar" width="190" height="190" draggable="false">
+    <div>
+      <h1>Rubén Tercero Alcázar</h1>
+      <p class="gancho">Técnico de sistemas. Un año resolviendo dudas en remoto a más de 30 clientes de pago. Busco Help Desk.</p>
+      <ul class="pastillas">
+        <li>23 años</li>
+        <li>Ciudad Real</li>
+        <li>Remoto, Ciudad Real o Madrid</li>
+        <li>Incorporación inmediata</li>
+      </ul>
+      <div class="botones">
+        <a class="btn principal" href="https://wa.me/34640218703">Escríbeme por WhatsApp</a>
+        <a class="btn" href="#contacto">Ver contacto</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Cifras -->
+  <div class="cifras">
+    <div><span class="num">+30</span><span>clientes de pago atendidos en remoto</span></div>
+    <div><span class="num">+400</span><span>horas de sesiones 1&nbsp;a&nbsp;1</span></div>
+    <div><span class="num">600.000</span><span>visualizaciones en un mes</span></div>
+    <div><span class="num">6 meses</span><span>en empresa, con teletrabajo</span></div>
+  </div>
+  <div style="height:56px"></div>
+
+  <!-- 4. Último año -->
+  <section>
+    <p class="etiqueta">Último año</p>
+    <h2>Un año atendiendo a gente en remoto, la mayoría en inglés.</h2>
+    <div class="tarjeta">
+      <h3>Formador online 1 a 1 (proyecto propio)</h3>
+      <p class="meta">Protoss Academy · Remoto · 2025 – actualidad</p>
+      <p>Monté mi propia web y doy sesiones de pago de StarCraft II a 10 €/hora. Empezó casi en broma y acabó siendo algo serio: más de 30 clientes.</p>
+      <p>Cada sesión es lo mismo que un buen soporte: escucho el problema, lo diagnostico y lo explico hasta que se entiende. Casi siempre en inglés, por videollamada.</p>
+      <p><a class="enlace" href="https://protossacademy.framer.website/en/" rel="noopener">Ver la web del proyecto</a></p>
+      <div class="destacado"><span class="num">+400</span><span class="gris">horas de sesiones 1 a 1</span></div>
+    </div>
+    <div class="tarjeta">
+      <h3>Canal de YouTube</h3>
+      <p class="meta">Proyecto con un compañero · Remoto · Actualidad</p>
+      <p>Monto, edito con DaVinci Resolve, reviso y subo los vídeos; él pone la voz.</p>
+      <div class="destacado"><span class="num">600.000</span><span class="gris">visualizaciones en noviembre de 2026</span></div>
+    </div>
+  </section>
+
+  <!-- 5. Antes -->
+  <section>
+    <p class="etiqueta">Antes</p>
+    <div class="antes">
+      <span class="num">6 meses</span>
+      <div>
+        <h3>Prácticas de FP y contrato de verano</h3>
+        <p class="meta">UnObjetivoDiferente (medio de noticias) · Ciudad Real · Marzo – septiembre de 2024</p>
+        <p>Publicaba y redactaba noticias, editaba contenido y atendía a clientes. Resolvía las incidencias informáticas del día a día y revisaba la red interna, buena parte del tiempo teletrabajando. Al acabar las prácticas me llamaron para cubrir el verano.</p>
+      </div>
+    </div>
+    <div class="antes">
+      <span class="num">6 meses</span>
+      <div>
+        <h3>Desarrollo de un videojuego para Roblox</h3>
+        <p class="meta">Proyecto en equipo</p>
+        <p>Seis meses desarrollando un juego en equipo, programado en Luau.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Cómo soy, fuera del trabajo, qué busco -->
+  <section>
+    <div class="dos">
+      <div>
+        <p class="etiqueta">Cómo soy</p>
+        <ul class="lista">
+          <li><b>Constante:</b> un año seguido con mi proyecto, más de 30 clientes.</li>
+          <li><b>Paciente explicando:</b> más de 400 horas de sesiones 1 a 1.</li>
+          <li><b>Autodidacta:</b> web, código y vídeo aprendidos por mi cuenta.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="etiqueta">Fuera del trabajo</p>
+        <ul class="lista">
+          <li>Juego a StarCraft II en competición; de ahí salió mi proyecto.</li>
+          <li>Voy al gimnasio.</li>
+          <li>Casi siempre tengo algún proyecto propio entre manos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="etiqueta">Qué busco</p>
+    <h2>Un puesto de Help Desk o soporte IT.</h2>
+    <ul class="lista">
+      <li><b>Puesto:</b> Help Desk sobre todo; también soporte IT, sistemas o desarrollo web junior.</li>
+      <li><b>Dónde:</b> en remoto, o presencial o híbrido en Ciudad Real o Madrid.</li>
+      <li><b>Desde cuándo:</b> ya. Incorporación inmediata.</li>
+    </ul>
+  </section>
+
+  <!-- 7. Formación, conocimientos, idiomas -->
+  <section>
+    <div class="dos">
+      <div>
+        <p class="etiqueta">Formación</p>
+        <h3>Grado Medio en Sistemas Microinformáticos y Redes (SMR)</h3>
+        <p class="meta">IES Maestre de Calatrava · Ciudad Real · 2022-2024</p>
+        <p><b>Grado Superior DAW</b> <span class="gris">· cursando, a distancia</span></p>
+        <p class="etiqueta" style="margin-top:36px">Idiomas</p>
+        <ul class="lista">
+          <li><b>Español:</b> nativo.</li>
+          <li><b>Inglés:</b> fluido, lo uso a diario en mis sesiones.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="etiqueta">Conocimientos</p>
+        <ul class="lista">
+          <li><b>Sistemas:</b> Windows 10 y 11, Windows Server, Ubuntu Server, Linux, Active Directory, DNS.</li>
+          <li><b>Redes:</b> TCP/IP, LAN/Wi-Fi, Packet Tracer.</li>
+          <li><b>Microsoft 365:</b> Outlook, Teams, Word, Excel.</li>
+          <li><b>Programación:</b> HTML, CSS, JavaScript, React, Node.js, Java, Python, PHP, MySQL.</li>
+          <li><b>Vídeo e IA:</b> DaVinci Resolve, ChatGPT, Claude.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Contacto -->
+  <section class="contacto" id="contacto">
+    <p class="etiqueta">Contacto</p>
+    <h2>Entrevista cuando quieras.</h2>
+    <div class="dato"><b>640 218 703</b><button class="copiar" type="button" data-copiar="640218703">Copiar</button></div>
+    <div class="dato"><b>rubenbachiller01@gmail.com</b><button class="copiar" type="button" data-copiar="rubenbachiller01@gmail.com">Copiar</button></div>
+    <div class="botones">
+      <a class="btn principal" href="https://wa.me/34640218703">Escríbeme por WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- 9. Pie -->
+<footer>Rubén Tercero Alcázar · Ciudad Real · 2026</footer>
+
+<script>
+  document.querySelectorAll(".copiar").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var t = b.dataset.copiar;
+      function hecho() { b.textContent = "Copiado"; b.classList.add("ok");
+        setTimeout(function () { b.textContent = "Copiar"; b.classList.remove("ok"); }, 1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(hecho, function () {});
+      } else {
+        var i = document.createElement("textarea"); i.value = t; document.body.appendChild(i); i.select();
+        try { document.execCommand("copy"); hecho(); } catch (e) {} document.body.removeChild(i);
+      }
+    });
+  });
+</script>
+</body>
+</html>
